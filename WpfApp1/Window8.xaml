@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.Window8"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window8" Height="500" Width="550" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid>
+        <DataGrid x:Name="DGrid" Margin="42,45,206,183.4" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Mail" Binding="{Binding Mail}"/>
+                <DataGridTextColumn Header="Code" Binding="{Binding Code}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Текущие записи" HorizontalAlignment="Left" Margin="82,0,0,0" VerticalAlignment="Top" FontFamily="Segoe Script" FontSize="22"/>
+        <Line X1="70" Y1="20" X2="35" Y2="20" Stroke="Black" StrokeThickness="1"/>
+        <Button Content="Назад" Click="Button_Click" HorizontalAlignment="Left" Margin="449,425,0,0" VerticalAlignment="Top" Width="85" Height="35" FontFamily="Segoe Script" FontSize="18" Background="White" BorderThickness="0" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" RenderTransformOrigin="0.497,-1.362"/>
+        <DataGrid x:Name="DGrid1" Margin="343,45,64,183.4" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Time" Binding="{Binding Time}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
